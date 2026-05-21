@@ -2428,7 +2428,7 @@ display:block;
 
 .panel-title {
     font-family: 'Lobster';
-    font-size: 25px;
+    font-size: 28px;
 text-align: center;
     color:#800360;
 
@@ -2461,7 +2461,7 @@ margin-top: -7px;
   right:0;
   top:22%;
   bottom:0;
-  height:78%;
+  height:58%;
 
   border-radius:20px;
   border:2.5px solid #9e1960;
@@ -2924,13 +2924,16 @@ const dots = document.querySelectorAll('.dot');
 
 track.addEventListener('scroll', () => {
 
+  const slideWidth =
+    document.querySelector('.grupo').offsetWidth;
+
   const index = Math.round(
-    track.scrollLeft / track.clientWidth
+    track.scrollLeft / slideWidth
   );
 
-  dots.forEach(dot =>
-    dot.classList.remove('active')
-  );
+  dots.forEach(dot => {
+    dot.classList.remove('active');
+  });
 
   if(dots[index]){
     dots[index].classList.add('active');
