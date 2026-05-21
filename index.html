@@ -2921,23 +2921,31 @@ window.addEventListener('scroll', () => {
 
 const track = document.querySelector('.carrusel-track');
 const dots = document.querySelectorAll('.dot');
+const slides = document.querySelectorAll('.grupo');
 
 track.addEventListener('scroll', () => {
 
-  const slideWidth =
-    document.querySelector('.grupo').offsetWidth;
+  let index = 0;
+  let closest = Infinity;
 
-  const index = Math.round(
-    track.scrollLeft / slideWidth
-  );
+  slides.forEach((slide, i) => {
+
+    const distance = Math.abs(
+      slide.offsetLeft - track.scrollLeft
+    );
+
+    if(distance < closest){
+      closest = distance;
+      index = i;
+    }
+
+  });
 
   dots.forEach(dot => {
     dot.classList.remove('active');
   });
 
-  if(dots[index]){
-    dots[index].classList.add('active');
-  }
+  dots[index].classList.add('active');
 
 });
 
