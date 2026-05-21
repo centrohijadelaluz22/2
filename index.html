@@ -100,7 +100,7 @@ text-shadow:
 .hero-text{
 font-family:'Cathalia';
 font-size:21px;
-margin:0px 0 20px 0;
+margin:0px 0 15px 0;
 color:#800360;
 
 text-shadow:
@@ -110,15 +110,30 @@ text-shadow:
 }
 
 .btn-agenda{
-padding:5px 36px;
-border-radius:30px;
+padding:6px 36px;
+border-radius:20px;
 border:1.5px solid rgba(255,255,255,0.85);
-background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
+background:linear-gradient(
+135deg,
+#d9cea5 0%,
+#e3c3b6 35%,
+#deafc6 70%,
+#f1d8e5 100%
+);
 color:white;
 cursor:pointer;
 box-shadow:
-0 0 12px rgba(255,255,255,0.35),
+0 0 4px #ff4fb7,
+0 0 10px #ff4fb7,
+0 0 20px #d10b84,
+0 0 40px #b3076b,
+0 0 70px #b3076b,
 0 6px 18px rgba(0,0,0,0.45);
+ text-shadow:
+0 0 4px #ff4fb7,
+0 0 10px #ff4fb7,
+0 0 20px #d10b84,
+0 0 40px #b3076b;
 font-family:'NotoEthiopic',serif;
   opacity:0;
 animation:aparecerSuave 0.9s ease forwards;
@@ -1803,7 +1818,7 @@ box-shadow:
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
+  gap:10px;
 pointer-events:none;
  background: #c42d9f;
   backdrop-filter:blur(6px);
