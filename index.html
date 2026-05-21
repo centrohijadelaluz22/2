@@ -2296,6 +2296,34 @@ flex-shrink:0;
 .star2.s5{ top:50%; left:-16px; transform:translateY(-50%); }
 .star2.s6{ top:50%; right:-16px; transform:translateY(-50%); }
 
+ .reels-scroll{
+width:100%;
+height:100%;
+
+display:flex;
+overflow-x:auto;
+
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+}
+
+.reels-scroll::-webkit-scrollbar{
+display:none;
+}
+
+.reels-scroll a{
+flex:0 0 100%;
+height:100%;
+scroll-snap-align:start;
+}
+
+.reels-scroll img{
+width:100%;
+height:100%;
+object-fit:cover;
+
+display:block;
+}
 
 @media (max-width:768px){
 
