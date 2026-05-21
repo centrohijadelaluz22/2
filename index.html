@@ -226,7 +226,7 @@ text-shadow:
 0 0 29px rgba(25,87,145,0.9),
 0 0 60px rgba(25,87,145,0.7);
 }
-  
+ 
 /* ================= CARRUSEL ================= */
 
 .carousel{
@@ -425,6 +425,7 @@ inset 0 0 50px rgba(25,87,145,0.4);
   justify-content:center;
 }
 
+ 
 /* IMÁGENES */
 .grupo img{
   width:45%;
@@ -433,26 +434,6 @@ inset 0 0 50px rgba(25,87,145,0.4);
   border-radius:18px;
   position: relative; 
   z-index:2;
-}
-
-/* DOTS */
-.dots{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:23px;
-}
-
-.dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.4);
-}
-
-.dot.active{
-  background:#d9dcde;
-  box-shadow:0 0 8px #195791;
 }
 
  .btn-consulta{
@@ -526,73 +507,9 @@ animation:aparecerSuave 0.9s ease;
   }
 
 }
-/* ================= OJITO ================= */
 
-.ojito-section{
-padding:20px 20px 10px 20px;
-text-align:center;
-}
 
-.ojito-title{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-}
 
-.ojito-title h2{
-font-family:'Halja';
-font-size:clamp(70px,7vw,100px);
-font-weight:300;
-margin:0;
-color:#195791;
-text-shadow:
-0 0 6px rgba(120,170,220,0.9),
-0 0 14px rgba(120,170,220,0.8),
-0 0 25px rgba(25,87,145,0.6),
-0 0 50px rgba(25,87,145,0.4);
-  animation: titileoSuave 2s ease-in-out infinite alternate;
-}
-
-.heart{
-height:clamp(55px,6vw,85px);
-}
-
-/* ================= SOBRE MI ================= */
-
-.sobre-mi-section{
-  padding:20px 20px 10px 20px;
-  text-align:center;
-}
-
-.sobre-mi-title{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-}
-
-.sobre-mi-title h2{
-  font-family:'Halja';
-  font-size:clamp(70px,7vw,100px);
-  font-weight:200;
-  margin:0;
- color:#195791;
-
-/* MISMO GLOW EXACTO */
-text-shadow:
-0 0 6px rgba(120,170,220,0.9),
-0 0 14px rgba(120,170,220,0.8),
-0 0 25px rgba(25,87,145,0.6),
-0 0 50px rgba(25,87,145,0.4);
-
-/* MISMA ANIMACIÓN */
-animation: titileoSuave 2s ease-in-out infinite alternate;
-}
-
-.sobre-img{
-  height:clamp(55px,6vw,85px);
-}
 
 /* Animación giro sutil */
 @keyframes giroSuave{
@@ -671,70 +588,6 @@ to{ width:6%; }
 .heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
 .heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
 
-/* ================= PAGOS & PROHIBIDOS ================= */
-
-.info-section{
-max-width:1200px;
-margin:40px auto 70px auto;
-display:flex;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.info-col{
-flex:1;
-min-width:300px;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.info-img{
-width:180px;
-margin-bottom:10px;
-}
-
-.prohibido-img{
-width:195px;
-}
-
-.prohibidos-wrapper .info-title{
-margin-top:-12px;
-}
-
-.prohibidos-wrapper .info-box{
-margin-top:-10px;
-}
-
-.info-title{
-font-family:'Lobster';
-font-size:38px;
-color:#1f376d;
-text-align:center;
-margin-top:0;
-margin-bottom:20px;
-text-shadow:
-1px 0 #1f376d,
--1px 0 #1f376d,
-0 1px #1f376d,
-0 -1px #1f376d,
-0 0 10px rgba(31,55,109,0.35);
-}
-
-.info-box{
-background:rgba(30,55,110,0.85);
-padding:30px;
-border-radius:20px;
-color:white;
-text-align:center;
-line-height:1.6;
-box-shadow:-12px 14px 25px rgba(0,0,0,0.35);
-}
-
-.info-box p{
-margin-bottom:14px;
-}
 
 /* ================= NUEVO TITULO CATALOGO ================= */
 
@@ -2537,6 +2390,21 @@ inset 0 0 50px rgba(179,7,107,0.5);
   0 0 20px #d10b84,
   0 0 40px #b3076b;
 }
+
+.texto-formaciones{
+  font-family:'NotoEthiopic';
+
+  font-size:16px;
+
+  text-align:center;
+
+  color:#800360;
+
+  text-shadow:
+  0 0 6px rgba(179,7,107,0.9),
+  0 0 18px rgba(179,7,107,0.7),
+  0 0 35px rgba(179,7,107,0.5);
+}
  
 </style>  </head>  <body>
 
@@ -2597,8 +2465,8 @@ Consulta Gratuita Aqui
 
     <div class="panel-left">
         <h2 class="panel-title">Nuevas Formaciones</h2>
+     <div class="texto-formaciones">Aqui podras aprender diferentes herramientas, conocimiento y guias tanto para ti como para servir a nuestros hermanitos</div>
      <div class="carrusel-wrapper">
-<div class="hero-subtitle">Aqui podras aprender diferentes herramientas, conocimiento y guias tanto para ti como para servir a nuestros hermanitos</div> 
   <div class="carrusel-track">
 
     <div class="grupo">
@@ -2620,6 +2488,33 @@ Consulta Gratuita Aqui
 
     <div class="panel-right">
         <h2 class="panel-title">Cursos Grabados</h2>
+     <div class="texto-formaciones">Aprende diferente herramientas holisticas a tus tiempos y ritmos</div>
+     <div class="carrusel-wrapper">
+  <div class="carrusel-track">
+
+    <div class="grupo">
+      <img src="reiki.png">
+    </div>
+
+    <div class="grupo">
+      <img src="bastet.png">
+    </div>
+
+   <div class="grupo">
+      <img src="cirugia.png">
+    </div>
+
+  <div class="grupo">
+      <img src="pendulo.png">
+    </div>
+   
+  </div>
+
+</div>
+
+<div class="desliza-formaciones">
+  Haz Click y/o Desliza
+</div>
     </div>
 </div>
  
