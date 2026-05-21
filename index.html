@@ -419,11 +419,10 @@ inset 0 0 50px rgba(25,87,145,0.4);
 /* GRUPO DE 2 IMÁGENES */
 .grupo{
   min-width:100%;
+  scroll-snap-align:start;
+
   display:flex;
-  align-items: flex-start;
-  gap:20px;
   justify-content:center;
-  scroll-snap-align:center;
 }
 
 /* IMÁGENES */
@@ -2921,31 +2920,18 @@ window.addEventListener('scroll', () => {
 
 const track = document.querySelector('.carrusel-track');
 const dots = document.querySelectorAll('.dot');
-const slides = document.querySelectorAll('.grupo');
 
 track.addEventListener('scroll', () => {
 
-  let index = 0;
-  let closest = Infinity;
+    const slideWidth = track.clientWidth;
 
-  slides.forEach((slide, i) => {
-
-    const distance = Math.abs(
-      slide.offsetLeft - track.scrollLeft
+    const index = Math.round(
+        track.scrollLeft / slideWidth
     );
 
-    if(distance < closest){
-      closest = distance;
-      index = i;
-    }
-
-  });
-
-  dots.forEach(dot => {
-    dot.classList.remove('active');
-  });
-
-  dots[index].classList.add('active');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
 
 });
 
