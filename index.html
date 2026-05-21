@@ -2497,12 +2497,12 @@ inset 0 0 50px rgba(179,7,107,0.5);
 /* CADA SLIDE */
 
 .grupo{
-  min-width:100%;
+  flex: 0 0 100%;
 
   display:flex;
   justify-content:center;
 
-  scroll-snap-align:center;
+  scroll-snap-align:start;
 }
 
 /* IMAGENES */
@@ -2923,15 +2923,13 @@ const dots = document.querySelectorAll('.dot');
 
 track.addEventListener('scroll', () => {
 
-    const slideWidth = track.clientWidth;
+  const index = Math.round(
+    track.scrollLeft / track.clientWidth
+  );
 
-    const index = Math.round(
-        track.scrollLeft / slideWidth
-    );
-
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-    });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
 
 });
 
