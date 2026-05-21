@@ -2392,6 +2392,40 @@ display:block;
   }
 
 }
+
+/* CONTENEDOR RECTANGULAR */
+
+.panel {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 500px;
+
+    margin: 60px auto;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)),
+        url('fondo.png');
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 28px;
+
+    display: flex;
+    overflow: hidden;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.35);
+}
+
+/* MITADES */
+
+.panel-left,
+.panel-right {
+    flex: 1;
+    padding: 40px;
+}
+ 
 </style>  </head>  <body>
 
   
@@ -2443,6 +2477,21 @@ display:block;
  <button class="btn-consulta" onclick="consultaGratis()">
 Consulta Gratuita Aqui
 </button>
+ <section class="titulo-sanemos">
+  <h2 class="animar-titulo">Cursos y Formaciones</h2>
+</section>
+
+ <div class="panel">
+
+    <div class="panel-left">
+        <!-- INFO IZQUIERDA -->
+    </div>
+
+    <div class="panel-right">
+        <!-- INFO DERECHA -->
+    </div>
+</div>
+ 
 <section class="titulo-sanemos">
   <h2 class="animar-titulo">Proverbios 31:10-31</h2>
 </section>
