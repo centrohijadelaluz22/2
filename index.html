@@ -2520,29 +2520,22 @@ inset 0 0 50px rgba(179,7,107,0.5);
   z-index:2;
 }
 
-/* DOTS */
+.desliza-formaciones{
+  text-align:center;
 
-.dots{
-  display:flex;
-  justify-content:center;
-  gap:10px;
+  margin-top:20px;
 
-  margin-top:23px;
-}
+  font-family:'Nicholas';
 
-.dot{
-  width:10px;
-  height:10px;
+  font-size:22px;
 
-  border-radius:50%;
+  color:white;
 
-  background:rgba(255,255,255,0.4);
-}
-
-.dot.active{
-  background:#d9dcde;
-
-  box-shadow:0 0 8px #195791;
+  text-shadow:
+  0 0 4px #ff4fb7,
+  0 0 10px #d10b84,
+  0 0 20px #d10b84,
+  0 0 40px #b3076b;
 }
  
 </style>  </head>  <body>
@@ -2620,9 +2613,8 @@ Consulta Gratuita Aqui
 
 </div>
 
-<div class="dots">
-  <span class="dot active"></span>
-  <span class="dot"></span>
+<div class="desliza-formaciones">
+  Haz Click y/o Desliza
 </div>
     </div>
 
@@ -2916,24 +2908,6 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-<script>
-
-const track = document.querySelector('.carrusel-track');
-const dots = document.querySelectorAll('.dot');
-
-track.addEventListener('scroll', () => {
-
-  const index = Math.round(
-    track.scrollLeft / track.clientWidth
-  );
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-
-});
-
-</script>
 </body>
 
 </html>
