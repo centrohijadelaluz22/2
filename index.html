@@ -2440,7 +2440,7 @@ display:block;
    en el siguiente boton y revisaremos<br>
    gratuitamente cual es la mejor opcion.<br>
 </p>
- <button class="btn-consulta">
+ <button class="btn-consulta" onclick="consultaGratis()">
 Consulta Gratuita Aqui
 </button>
 <section class="titulo-sanemos">
@@ -2624,6 +2624,12 @@ const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURICompon
 window.open(url,"_blank");
 }
 
+function consultaGratis(){
+const numero="56949106065";
+const mensaje="Hola, Fabi 💕🫶🏻. Tengo algunas dudas sobre que terapia tomar y me encantaría consultar que lo podamos consultar";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
 
 function irASeccion(nombre){
 
