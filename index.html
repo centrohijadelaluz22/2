@@ -24,11 +24,6 @@ src: url('LobsterTwo-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Milk Yogurt';
-  src: url('Milk Yogurt.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'Nicholas';
   src: url('Nicholas.otf') format('opentype');
 }
@@ -229,14 +224,6 @@ text-shadow:
 
 }
 
-.glow-estatico{
-color:#195791;
-text-shadow:
-0 0 10px rgba(120,170,220,1),
-0 0 22px rgba(120,170,220,1),
-0 0 29px rgba(25,87,145,0.9),
-0 0 60px rgba(25,87,145,0.7);
-}
  
 /* ================= CARRUSEL ================= */
 
@@ -253,127 +240,8 @@ padding:20px calc((100vw - 960px)/2);
 display:none;
 }
 
-/* ================= TARJETAS ================= */
-
-.card{
-flex:0 0 300px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center;
-scroll-snap-align:start;
-min-height:520px;
-}
-
-.card h3{
-font-size:20px;
-text-align:center;
-color:#d9dcde;
-margin-bottom:14px;
- text-shadow:
-0 0 4px #ff4fb7,
-0 0 10px #ff4fb7,
-0 0 15px #d10b84,
-0 0 20px #d10b84,
-0 0 40px #b3076b;
-min-height:50px;
-}
-
-.image-frame{
-position:relative;
-width:85%;
-aspect-ratio:1/1;
-margin-bottom:16px;
-border:2px solid #d4d1a5;
-border-radius:22px;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:
-0 0 6px #f3efc8,
-0 0 14px #e7ddb0,
-0 0 25px #d4d1a5,
-0 0 50px rgba(212,209,165,0.7);
-}
 
 
-.image-frame img.main{
-width:88%;
-height:88%;
-object-fit:contain;
-border-radius:18px;
-}
-
-.star{
-position:absolute;
-width:28px;
-filter:
-drop-shadow(0 0 6px #ffffff)
-drop-shadow(0 0 14px #cfd3db);
-}
-
-.star.s1{ top:-14px; left:15%; }
-.star.s2{ bottom:-16px; right:18%; }
-.star.s3{ top:45%; left:-16px; }
-.star.s4{ bottom:30%; right:-14px; }
-
-.card p{
-font-family:'Lobster';
-font-size:17px;
-text-align:center;
-color:#d9dcde;
-margin-bottom:16px;
- text-shadow:
-0 0 4px #ff4fb7,
-0 0 10px #ff4fb7,
-0 0 15px #d10b84,
-0 0 20px #d10b84,
-0 0 40px #b3076b;
-min-height:60px;
-}
-
-.card button{
-padding:8px 24px;
-border-radius:22px;
-border:1.5px solid #d9dcde;
-background:transparent;
-font-family:'NotoEthiopic';
-color:#d9dcde;
-cursor:pointer;
-
-/* glow del texto */
- text-shadow:
-0 0 4px #ff4fb7,
-0 0 10px #ff4fb7,
-0 0 15px #d10b84,
-0 0 20px #d10b84,
-0 0 40px #b3076b;
-
-/* glow del borde */
-box-shadow:
-0 0 2px rgba(255,79,183,0.7),
-0 0 5px rgba(209,11,132,0.5),
-0 0 10px rgba(179,7,107,0.35);
-
-transition: all 0.15s ease;
-}
-
-.card button:hover{
-background:rgba(0,0,0,0.25);
-
-box-shadow:
-0 0 6px rgba(120,170,220,0.5),
-0 0 12px rgba(120,170,220,0.4),
-0 0 18px rgba(25,87,145,0.3);
-}
-
-.card button:active{
-background:rgba(0,0,0,0.4);
-transform:scale(0.95);
-
-box-shadow:
-0 0 3px rgba(120,170,220,0.3);
-}
 
 /* WRAPPER GENERAL */
 .carrusel-wrapper{
@@ -601,25 +469,6 @@ to{ width:6%; }
 
 
 /* ================= NUEVO TITULO CATALOGO ================= */
-
-.catalogo-titulo{
-font-family:'Halja';
-font-size:42px;
-font-weight:100;
-color:#195791;
-/* MISMO GLOW EXACTO */
-text-shadow:
-0 0 6px rgba(120,170,220,0.9),
-0 0 14px rgba(120,170,220,0.8),
-0 0 25px rgba(25,87,145,0.6),
-0 0 50px rgba(25,87,145,0.4);
-
-/* MISMA ANIMACIÓN */
-animation: titileoSuave 2s ease-in-out infinite alternate;
-margin-left:80px;
-margin-top:20px;
-margin-bottom:40px;
-}
 
 .titulo-principios{
   text-align:center;
@@ -1503,22 +1352,6 @@ font-size:15px;
   align-items:center;
   justify-content:center;
   gap:12px;
-}
-
-.nuevo-titulo-container h2{
-  font-family:'Halja';
-  font-size:clamp(70px,7vw,100px);
-  font-weight:200;
-  margin:0;
-  color:#195791;
-
-  text-shadow:
-  0 0 6px rgba(120,170,220,0.9),
-  0 0 14px rgba(120,170,220,0.8),
-  0 0 25px rgba(25,87,145,0.6),
-  0 0 50px rgba(25,87,145,0.4);
-
-  animation: titileoSuave 2s ease-in-out infinite alternate;
 }
 
 .nuevo-img{
